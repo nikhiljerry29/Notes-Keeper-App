@@ -2,11 +2,22 @@ import React from "react";
 import "./Note.css";
 import PropTypes from "prop-types";
 
-function Note({ title, content }) {
+function Note({ id, title, content, handleDelete }) {
    return (
       <div className='note note--light'>
-         <div className='note__title'>{title}</div>
-         <div className='note__content'>{content}</div>
+         <div>
+            <div className='note__title'>{title}</div>
+            <div className='note__content'>{content}</div>
+         </div>
+         <button
+            type='button'
+            className='btn btn--danger'
+            onClick={() => {
+               handleDelete(id);
+            }}
+         >
+            Delete
+         </button>
       </div>
    );
 }

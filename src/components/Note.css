@@ -1,4 +1,7 @@
 .note {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
    border-radius: 7px;
    padding: 1rem;
    box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 15px;
@@ -16,13 +19,14 @@
    font-size: 0.95rem;
    white-space: pre-wrap;
    word-wrap: break-word;
+   padding-bottom: 1rem;
 }
 
 .note--light {
    background-color: white;
 }
 
-.note--light > .note__title {
+.note--light .note__title {
    border-bottom: 0.15rem solid #f7f7f7;
 }
 
